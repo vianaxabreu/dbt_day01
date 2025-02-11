@@ -2,7 +2,7 @@ with
     orders as (select * from {{ ref("stg_raw__sales") }}),
 
     products as (select * from {{ ref("stg_raw__product") }}),
-    
+
     orders_joined_products as (
         select
             orders.date_date,
@@ -18,8 +18,8 @@ with
     ),
 
     sales_margin as (
-        select *, round((revenue - purchase_cost), 2) as margin from orders_joined_products
+        select *, round((revenue - purchase_cost), 2) as margin
+        from orders_joined_products
     )
 select *
-from
-    sales_margin
+from sales_margin
