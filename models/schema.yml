@@ -18,7 +18,6 @@ sources:
             description: price the product was purchased, should not be null
             tests:
               - not_null
-
       - name: sales
         identifier: raw_gz_sales
         description: table contain all sales and their information
