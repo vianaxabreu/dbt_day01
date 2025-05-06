@@ -1,3 +1,14 @@
+{#
+this is comment
+{{
+  config(
+    materialized = "table"
+  )
+}}
+
+#}
+
+
 with
     orders as (select * from {{ ref("stg_raw__sales") }}),
 
