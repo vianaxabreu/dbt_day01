@@ -1,17 +1,8 @@
-{#
-this is comment
-{{
-  config(
-    materialized = "table"
-  )
-}}
-
-#}
+{{ config(materialized="table") }}
 
 
-with
+WITH
     orders as (select * from {{ ref("stg_raw__sales") }}),
-
     products as (select * from {{ ref("stg_raw__product") }}),
 
     orders_joined_products as (

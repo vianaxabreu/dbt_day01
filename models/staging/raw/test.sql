@@ -1,0 +1,1 @@
+select * from gcp-pj-de.neobank.raw_product
